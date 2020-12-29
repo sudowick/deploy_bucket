@@ -1,0 +1,11 @@
+{% extends "gallery/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>UPLOAD</h1>
+<h2>{{ error }}</h2>
+<form method='POST' enctype="multipart/form-data">
+  {% csrf_token %}
+{{ form|crispy }}
+<button type='submit'>UPLOAD</button>
+</form>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "gallery/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ post.created }}</small>
+            </div>
+            <h2 class="article-title" >{{ post.title }}</h2>
+            <img src = "{{ post.img.url }}" style="width:80%;height:450px;>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
